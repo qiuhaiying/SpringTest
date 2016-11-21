@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 //表明是spring的控制器
 @Controller
-@RequestMapping("/ugc")
+@RequestMapping()
 public class IndexController {
     /**
      * 1.使用RequestMapping注解来映射请求的URL
@@ -18,10 +18,15 @@ public class IndexController {
      * @ return
      */
     //匹配请求的路径
-    @RequestMapping("/b")
+    @RequestMapping("/a")
     public String hello(){
         System.out.println("hello world");
         return "success";
+    }
 
+    @RequestMapping("/")
+    public String index(){
+        System.out.println("hello world index");
+        return "index";
     }
 }
